@@ -1,0 +1,22 @@
+{
+    "name": "urlshortner",
+    "version": "1.0.0",
+    "description": "urlShotner Project",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-parser": "^1.4.7",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.9.3",
+        "nanoid": "^3.3.8",
+        "nodemon": "^3.1.9",
+        "urlshortner": "file:",
+        "uuid": "^11.0.4"
+    }
+}

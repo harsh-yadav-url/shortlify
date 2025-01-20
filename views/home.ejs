@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/home.css" />
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Shortlify</h1>
+      <form method="post" action="/url">
+        <input
+          type="text"
+          name="url"
+          placeholder="Long URL here..."
+          class="generate"
+        />
+        <button type="submit" class="inputBox">Generate</button>
+      </form>
+      <br />
+      <% if (locals.urls) { %>
+      <div class="tableBox">
+        <table>
+          <thead>
+            <tr>
+              <th>S. No</th>
+              <th>Redirect</th>
+              <th>ShortURL</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% urls.forEach((url, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= url.redirectURL %></td>
+              <td>http://localhost:8001/url/<span><%= url.shortId %></span></td>
+              <td><%= url.visiteHistory.length %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <% } %> <% if (locals.id) { %>
+
+      <table class="tableBoxGN">
+        <tr>
+          <td class="genurl">
+            http://localhost:8001/url/<span><%= id %></span>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/login">Sign in</a>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

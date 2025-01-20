@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Sign Up Page</title>
+  </head>
+
+  <body>
+    <form action="/user" method="post" class="login">
+      <h2>Sign Up</h2>
+      <div class="inputBx">
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+      <div class="inputBx">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="inputBx">
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Sign Up" />
+      </div>
+      <div class="links">
+        <a href="#">Forget Password</a>
+        <a href="/login">Sign in</a>
+      </div>
+    </form>
+  </body>
+</html>
